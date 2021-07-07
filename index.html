@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/destyle.css@2.0.2/destyle.css" rel="stylesheet">
+    <link href="tooltip.css" rel="stylesheet">
+    <style>
+        ul {
+            display: grid;
+            height: 100vh;
+        }
+
+        li {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        span {
+            cursor: pointer;
+        }
+
+        .active {
+            color: green;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <ul>
+            <li><span v-tooltip="{ message: 'Cool text', customClass: 'info' }">I have a tooltip!</span></li>
+            <li><span v-tooltip="{ message: 'Heh!', customClass: 'info' }">So do I</span></li>
+        </ul>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+    <script src="tooltip.js"></script>
+    <script>
+        var app = new Vue({
+            el: '#app',
+        })
+    </script>
+</body>
+
+</html>
